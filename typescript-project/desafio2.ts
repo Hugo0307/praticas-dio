@@ -30,7 +30,7 @@ enum Profissao {
     Padeiro,
 }
 
-//Modo 1
+//SOLUÇÃO 1 ABAIXO
 
 interface Pessoa {
     nome: string,
@@ -67,7 +67,7 @@ console.log(pessoa2);
 console.log(pessoa3);
 console.log(pessoa4);
 
-//Modo 2
+//SOLUÇÃO 2 ABAIXO
 class Person {
     private nome: string;
     private idade: number;

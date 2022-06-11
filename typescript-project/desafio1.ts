@@ -6,6 +6,8 @@ employee.code = 10;
 employee.name = "John";
 */
 
+//SOLUÇÃO ABAIXO
+
 function exibeDados (employee: {code: number, name: string}): void {
     console.log(`Nome do funcionário: ${employee.name} | Código: ${employee.code}`);
 }
