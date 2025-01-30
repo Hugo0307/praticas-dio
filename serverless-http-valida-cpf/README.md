@@ -77,81 +77,10 @@ Navigate to the `http` app folder and create a file in that folder named _local.
     mvn clean package
     mvn azure-functions:run
     ```
-
-1. From your HTTP test tool in a new terminal (or from your browser), call the HTTP GET endpoint: <http://localhost:7071/api/httpget>
-
-1. Test the HTTP POST trigger with a payload using your favorite secure HTTP test tool. This example runs in the `http` folder and uses the `curl` tool with payload data from the [`testdata.json`](./http/testdata.json) project file:
-
-    ```shell
-    curl -i http://localhost:7071/api/httppost -H "Content-Type: text/json" -d "@testdata.json"
-    ```
-
-1. When you're done, press Ctrl+C in the terminal window to stop the `func.exe` host process.
-
 ## Run your app using Visual Studio Code
 
 1. From the root directory run the `code .` code command to open the project in Visual Studio Code.
 1. Press **Run/Debug (F5)** to run in the debugger.
-1. Send GET and POST requests to the `httpget` and `httppost` endpoints respectively using your HTTP test tool (or browser for `httpget`). If you have the [RestClient](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension installed, you can execute requests directly from the [`test.http`](./http/test.http) project file.
-
-## Source Code
-
-The source code for the GET and POST functions is found in the [`Function.java`](./http/src/main/java/com/contoso/Function.java) file. The function is identified as an Azure Function by use of the `@FunctionName` and `@HttpTrigger` annotations from the `azure.functions.java.library.version` library in the POM.
-
-This code defines an HTTP GET triggered function:  
-
-```java
-@FunctionName("httpget")
-public HttpResponseMessage run(
-        @HttpTrigger(
-            name = "req",
-            methods = {HttpMethod.GET},
-            authLevel = AuthorizationLevel.FUNCTION)
-            HttpRequestMessage<Optional<String>> request,
-        final ExecutionContext context) {
-    context.getLogger().info("Java HTTP trigger processed a request.");
-
-    // Parse query parameter
-    String name = Optional.ofNullable(request.getQueryParameters().get("name")).orElse("World");
-
-    return request.createResponseBuilder(HttpStatus.OK).body("Hello, " + name).build();
-}
-```
-
-This code defines an HTTP POST triggered function, which expects a JSON payload with `name` and `age` values in the request.
-
-```java
-@FunctionName("httppost")
-public HttpResponseMessage runPost(
-        @HttpTrigger(
-            name = "req",
-            methods = {HttpMethod.POST},
-            authLevel = AuthorizationLevel.FUNCTION)
-            HttpRequestMessage<Optional<String>> request,
-        final ExecutionContext context) {
-    context.getLogger().info("Java HTTP trigger processed a POST request.");
-
-    // Parse request body
-    String name;
-    Integer age;
-    try {
-        ObjectMapper mapper = new ObjectMapper();
-        JsonNode jsonNode = mapper.readTree(request.getBody().orElse("{}"));
-        name = Optional.ofNullable(jsonNode.get("name")).map(JsonNode::asText).orElse(null);
-        age = Optional.ofNullable(jsonNode.get("age")).map(JsonNode::asInt).orElse(null);
-        if (name == null || age == null) {
-            return request.createResponseBuilder(HttpStatus.BAD_REQUEST)
-                    .body("Please provide both name and age in the request body.").build();
-        }
-    } catch (Exception e) {
-        context.getLogger().severe("Error parsing request body: " + e.getMessage());
-        return request.createResponseBuilder(HttpStatus.BAD_REQUEST)
-                .body("Error parsing request body").build();
-    }
-
-    return request.createResponseBuilder(HttpStatus.OK).body("Hello, " + name +"! You are " + age +" years old.").build();
-}
-```
 
 ## Deploy to Azure
 
