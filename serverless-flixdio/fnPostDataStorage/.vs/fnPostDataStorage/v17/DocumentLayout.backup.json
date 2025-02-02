@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dev_h\\OneDrive\\Documentos\\Desenv\\praticas-dio\\serverless-flixdio\\fnPostDataStorage\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9D1089D6-DEC4-43D8-A82A-4E5648445B6D}|..\\fnAllMovies\\fnAllMovies.csproj|c:\\users\\dev_h\\onedrive\\documentos\\desenv\\praticas-dio\\serverless-flixdio\\fnallmovies\\function1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D1089D6-DEC4-43D8-A82A-4E5648445B6D}|..\\fnAllMovies\\fnAllMovies.csproj|c:\\users\\dev_h\\onedrive\\documentos\\desenv\\praticas-dio\\serverless-flixdio\\fnallmovies\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDB019A0-7AD8-43A4-8DD5-ED766F27ED1A}|..\\fnMovieDetail\\fnMovieDetail.csproj|c:\\users\\dev_h\\onedrive\\documentos\\desenv\\praticas-dio\\serverless-flixdio\\fnmoviedetail\\function1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "C:\\Users\\dev_h\\OneDrive\\Documentos\\Desenv\\praticas-dio\\serverless-flixdio\\fnAllMovies\\Movie.cs",
+              "RelativeDocumentMoniker": "..\\fnAllMovies\\Movie.cs",
+              "ToolTip": "C:\\Users\\dev_h\\OneDrive\\Documentos\\Desenv\\praticas-dio\\serverless-flixdio\\fnAllMovies\\Movie.cs",
+              "RelativeToolTip": "..\\fnAllMovies\\Movie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T20:22:30.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Function1.cs",
+              "DocumentMoniker": "C:\\Users\\dev_h\\OneDrive\\Documentos\\Desenv\\praticas-dio\\serverless-flixdio\\fnAllMovies\\Function1.cs",
+              "RelativeDocumentMoniker": "..\\fnAllMovies\\Function1.cs",
+              "ToolTip": "C:\\Users\\dev_h\\OneDrive\\Documentos\\Desenv\\praticas-dio\\serverless-flixdio\\fnAllMovies\\Function1.cs",
+              "RelativeToolTip": "..\\fnAllMovies\\Function1.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwCoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T20:15:01.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Function1.cs",
+              "DocumentMoniker": "C:\\Users\\dev_h\\OneDrive\\Documentos\\Desenv\\praticas-dio\\serverless-flixdio\\fnMovieDetail\\Function1.cs",
+              "RelativeDocumentMoniker": "..\\fnMovieDetail\\Function1.cs",
+              "ToolTip": "C:\\Users\\dev_h\\OneDrive\\Documentos\\Desenv\\praticas-dio\\serverless-flixdio\\fnMovieDetail\\Function1.cs",
+              "RelativeToolTip": "..\\fnMovieDetail\\Function1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T19:56:08.884Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
